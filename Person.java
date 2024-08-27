@@ -1,38 +1,31 @@
-package com.tns.dayfour.firstpackage;
+package com.tns.dayfive;
 
 public class Person {
-	private String personName;
-	private int personAge;
-	private String personCity;
-	public String getPersonName() {
-	return personName;
-	}
-	public void setPersonName(String personName) 
-	{
-	this.personName = personName;
-	}
-	public int getPersonAge() {
-	return personAge;
-	}
-	public void setPersonAge(int personAge) {
-	this.personAge = personAge;
-	}
-	public String getPersonCity() {
-	return personCity;
-	}
-	public void setPersonCity(String personCity) 
-	{
-	this.personCity = personCity;
-	}
+	private String name;
+	private String city;
 	public Person() {
-	System.out.println("Default Constructor");
+	System.out.println("Person class default constructor");
+	name="Amit";
+	city="Pune";
 	}
-	public Person(String personName, int
-	personAge, String personCity) {
-	System.out.println("Parameterized Constructor");
-	this.personName = personName;
-	this.personAge = personAge;
-	this.personCity = personCity;
+	public Person(String name, String city) {
+	this.name = name;
+	this.city = city;
 	}
-
+	public String getName() {
+	return name;
+	}
+	public void setName(String name) {
+	this.name = name;
+	}
+	public String getCity() {
+	return city;
+	}
+	public void setCity(String city) {
+	this.city = city;
+	}
+	@Override
+	public String toString() {
+	return "Person [name=" + name + ", city=" + city + "]";
+	}
 }
