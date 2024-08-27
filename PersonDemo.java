@@ -1,33 +1,31 @@
-package com.tns.daythree;
+package com.tns.dayfour.firstpackage;
 
 import java.util.Scanner;
 
 public class PersonDemo {
-	public static void main(String[] args) { 
-		//scanner object to accept user inputs 
-		Scanner ob = new Scanner(System.in); 
-		String name; 
-		System.out.println("Enter Person Name : "); 
-		name = ob.next(); 
-		System.out.println("Enter age: "); 
-		int age = ob.nextInt(); 
-		System.out.println("Enter gender: "); 
-		String gender = ob.next(); 
-		System.out.println("Enter taxable income: "); 
-		int income = ob.nextInt(); 
-		//Person object and initialize values using setter 
-		Person person = new Person(); 
-		person.setName(name); 
-		person.setAge(age); 
-		person.setGender(gender); 
-		person.setIncome(income); 
-		//display person details using toString() method 
-		System.out.println(person); 
-		TaxCalculation calc = new TaxCalculation(); 
-		calc.calculateTax(person); //tax calculation 
-		System.out.println("After calculating tax : "); 
-		System.out.println(person); 
-		ob.close(); 
-		} 
-		
+	public static void main(String args[])
+	{
+	Person p1=new Person(); //default constructor invoked
+	Scanner sc=new Scanner(System.in);
+	String name, city;
+	int age;
+	System.out.println("Enter Person details : Name, age and city");
+	name=sc.nextLine();
+	age=sc.nextInt();
+	city=sc.nextLine();
+	//p1.personName=name private member can't accessible
+	p1.setPersonName(name);
+	p1.setPersonAge(age);
+	p1.setPersonCity(city);
+	System.out.println("Person Details Name : "+p1.getPersonName()+"\tAge : "+p1.getPersonAge()+"\tCity : "+p1.getPersonCity());
+	System.out.println("Enter Person details : Name, age and city");
+	name=sc.nextLine();
+	age=sc.nextInt();
+	city=sc.nextLine();
+	p1=new Person(name, age, city); 
+	//parameterized constructor invoked);
+	System.out.println("Person Details Name : "+p1.getPersonName()+"\tAge : "+p1.getPersonAge()+"\tCity : "+p1.getPersonCity());
+	sc.close();
+	}
+
 }

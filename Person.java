@@ -1,47 +1,38 @@
-package com.tns.daythree;
+package com.tns.dayfour.firstpackage;
 
 public class Person {
-	private String name; 
-	private int income; 
-	private String gender; 
-	private int age; 
-	private int tax; 
-	//Getter and Setters 
-	public int getTax() { 
-	return tax; 
-	} 
-	public void setTax(int tax) { 
-	this.tax = tax; 
-	} 
-	public String getName() { 
-	return name; 
-	} 
-	public void setName(String name) { 
-	this.name = name; 
-	} 
-	public int getIncome() { 
-	return income; 
-	} 
-	public void setIncome(int income) { 
-	this.income = income; 
-	} 
-	public String getGender() { 
-	return gender; 
-	} 
-	public void setGender(String gender) { 
-	this.gender = gender; 
-	} 
-	public int getAge() { 
-	return age; 
-	} 
-	public void setAge(int age) { 
-	this.age = age; 
-	} 
-	//Object class method to return string representation of Person object 
-	@Override 
-	public String toString() { 
-	return "Person [name=" + name + ", income=" + income + ", gender=" + gender + ", age=" + age + ", tax="+tax+"]"; 
-	} 
-
+	private String personName;
+	private int personAge;
+	private String personCity;
+	public String getPersonName() {
+	return personName;
+	}
+	public void setPersonName(String personName) 
+	{
+	this.personName = personName;
+	}
+	public int getPersonAge() {
+	return personAge;
+	}
+	public void setPersonAge(int personAge) {
+	this.personAge = personAge;
+	}
+	public String getPersonCity() {
+	return personCity;
+	}
+	public void setPersonCity(String personCity) 
+	{
+	this.personCity = personCity;
+	}
+	public Person() {
+	System.out.println("Default Constructor");
+	}
+	public Person(String personName, int
+	personAge, String personCity) {
+	System.out.println("Parameterized Constructor");
+	this.personName = personName;
+	this.personAge = personAge;
+	this.personCity = personCity;
+	}
 
 }
