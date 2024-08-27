@@ -1,27 +1,31 @@
-package com.tns.dayfour.thirdpackage;
+package com.tns.daysix;
 
 public class MyClass {
-	private static MyClass obj=new MyClass();
-	private int id;
-	public int getId()
-	{
-	return id;
-	}
-	public void setId(int id)
-	{
-	this.id=id;
-	}
-	private MyClass() {
-	System.out.println("MyClass object created"); 
-	}
-	public static MyClass getObject() //factory method
-	{
-	return obj;
-	}
-	@Override
-	public String toString() {
-	return "MyClass [id=" + id + "]";
-	}
-
+	private int section ; //non-static or instance variable 
+	private static int srNo; //static or class variable 
+	//static Block 
+	static 
+	{ 
+	System.out.println("-----------Within Static Block---------"); 
+	srNo=1000; 
+	} 
+	//default constructor 
+	MyClass() 
+	{ 
+	System.out.println("--------------Within Default Constructor-----------"); 
+	srNo++; 
+	section++;  
+	} 
+	@Override 
+	public String toString() { 
+	return "MyClass [Serial No "+srNo+", Section=" + section + "]"; 
+	} 
+	//static method 
+	static void display()  
+	{ 
+	// System.out.println("Section : "+section); //can't access non static members  
+	System.out.println("Serial No. "+srNo);  
+	} 
+	
 
 }
